@@ -1,6 +1,6 @@
-import { readFile } from "fs";
-import { resolve, dirname } from "path";
-import { createServer } from "http";
+import {readFile} from "fs";
+import {resolve, dirname} from "path";
+import {createServer} from "http";
 
 export const httpServer = createServer((req, res) => {
   const __dirname = resolve(dirname(""));
@@ -16,8 +16,3 @@ export const httpServer = createServer((req, res) => {
     res.end(data);
   });
 });
-
-const HTTP_PORT = 3000;
-
-console.log(`Start static http server on the ${HTTP_PORT} port!`);
-httpServer.listen(HTTP_PORT);
