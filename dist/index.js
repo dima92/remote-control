@@ -27,6 +27,7 @@ exports.httpServer = void 0;
 var fs = __importStar(require("fs"));
 var path = __importStar(require("path"));
 var http = __importStar(require("http"));
+var screen_1 = require("./screen");
 exports.httpServer = http.createServer(function (req, res) {
     var __dirname = path.resolve(path.dirname(''));
     var file_path = __dirname + (req.url === '/' ? '/front/index.html' : '/front' + req.url);
@@ -40,6 +41,7 @@ exports.httpServer = http.createServer(function (req, res) {
         res.end(data);
     });
 });
+(0, screen_1.captureImage)();
 var HTTP_PORT = 3000;
 console.log("Start static http server on the ".concat(HTTP_PORT, " port!"));
 exports.httpServer.listen(HTTP_PORT);
