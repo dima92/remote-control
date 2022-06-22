@@ -2,10 +2,10 @@
   "name": "ws_task",
   "version": "1.0.0",
   "description": "Template for the WebSocket remote control task",
-  "main": "index.ts",
+  "main": "dist/index.js",
   "scripts": {
     "start": " tsc && node dist/index.js",
-    "start:dev": "ts-node ./index.ts"
+    "start:dev": "ts-node src src/index.ts"
   },
   "author": "Dmitry Tkachenko<dima-tkachenko@mail.ru>",
   "keywords": [],
